@@ -20,9 +20,9 @@ export default function Categories({categories, activeCategory, setActiveCategor
                     let isActive = item.name == activeCategory;
                     let activeButtonClass = isActive ? 'bg-amber-400' : 'bg-white';
                     return(
-                        <touchableCapacity
+                        <TouchableOpacity
                         key={index}
-                        onpress={()=> setActiveCategory(item.name)}
+                        onPress={()=> setActiveCategory(item.name)}
                         className="flex items-center space-y-1"
                         >
                             <View className= {"rounded-fill p-[6px]" +activeButtonClass}>
@@ -43,7 +43,7 @@ export default function Categories({categories, activeCategory, setActiveCategor
                                         {item.name}
                                     </Text>
 
-                        </touchableCapacity>
+                        </TouchableOpacity>
                     )
                 })
                 }
